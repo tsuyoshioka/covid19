@@ -4,17 +4,22 @@ export type SurfaceStyle = {
 }
 
 const surfaceStyleA: SurfaceStyle = {
-  strokeColor: '#5a8055',
-  fillColor: '#1b4d30'
+  // strokeColor: '#5a8055',
+  // fillColor: '#1b4d30'
+  strokeColor: '#436588',
+  fillColor: '#2b4a88'
 }
 
 const surfaceStyleB: SurfaceStyle = {
-  strokeColor: '#5a8055',
-  fillColor: '#00a040'
+  // strokeColor: '#5a8055',
+  // fillColor: '#00a040',
+  strokeColor: '#345488',
+  fillColor: '#1d5088'
 }
 
 const surfaceStyleC: SurfaceStyle = {
-  strokeColor: '#5a8055',
+  // strokeColor: '#5a8055',
+  strokeColor: '#5c6880',
   fillColor: '#c5e2c6'
 }
 

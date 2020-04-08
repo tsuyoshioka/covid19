@@ -1,71 +1,36 @@
 <template>
   <div>
-    <confirmed-cases-details-card
-      v-if="this.$route.params.card == 'details-of-confirmed-cases'"
+    <ChitoseConfirmedCasesNumberCard
+      v-if="this.$route.params.card == 'number-of-confirmed-cases'"
     />
-    <tested-cases-details-card
-      v-else-if="this.$route.params.card == 'details-of-tested-cases'"
-    />
-    <confirmed-cases-number-card
-      v-else-if="this.$route.params.card == 'number-of-confirmed-cases'"
-    />
-    <confirmed-cases-attributes-card
+    <ChitoseConfirmedCasesAttributesCard
       v-else-if="this.$route.params.card == 'attributes-of-confirmed-cases'"
     />
-    <tested-number-card
-      v-else-if="this.$route.params.card == 'number-of-tested'"
-    />
-    <inspection-persons-number-card
-      v-else-if="this.$route.params.card == 'number-of-inspection-persons'"
-    />
-    <telephone-advisory-reports-number-card
-      v-else-if="
-        this.$route.params.card ==
-          'number-of-reports-to-covid19-telephone-advisory-center'
-      "
-    />
-    <consultation-desk-reports-number-card
-      v-else-if="
-        this.$route.params.card ==
-          'number-of-reports-to-covid19-consultation-desk'
-      "
-    />
-    <metro-card
-      v-else-if="
-        this.$route.params.card == 'predicted-number-of-toei-subway-passengers'
-      "
-    />
-    <agency-card v-else-if="this.$route.params.card == 'agency'" />
   </div>
 </template>
 
 <script>
 import Data from '@/data/data.json'
-import MetroData from '@/data/metro.json'
-import agencyData from '@/data/agency.json'
-import ConfirmedCasesDetailsCard from '@/components/cards/ConfirmedCasesDetailsCard.vue'
-import TestedCasesDetailsCard from '@/components/cards/TestedCasesDetailsCard.vue'
-import ConfirmedCasesNumberCard from '@/components/cards/ConfirmedCasesNumberCard.vue'
-import ConfirmedCasesAttributesCard from '@/components/cards/ConfirmedCasesAttributesCard.vue'
-import TestedNumberCard from '@/components/cards/TestedNumberCard.vue'
-import InspectionPersonsNumberCard from '@/components/cards/InspectionPersonsNumberCard.vue'
-import TelephoneAdvisoryReportsNumberCard from '@/components/cards/TelephoneAdvisoryReportsNumberCard.vue'
-import ConsultationDeskReportsNumberCard from '@/components/cards/ConsultationDeskReportsNumberCard.vue'
-import MetroCard from '@/components/cards/MetroCard.vue'
-import AgencyCard from '@/components/cards/AgencyCard.vue'
+// import MetroData from '@/data/metro.json'
+// import agencyData from '@/data/agency.json'
+// import ConfirmedCasesDetailsCard from '@/components/cards/ConfirmedCasesDetailsCard.vue'
+// import TestedCasesDetailsCard from '@/components/cards/TestedCasesDetailsCard.vue'
+// import ConfirmedCasesNumberCard from '@/components/cards/ConfirmedCasesNumberCard.vue'
+// import ConfirmedCasesAttributesCard from '@/components/cards/ConfirmedCasesAttributesCard.vue'
+// import TestedNumberCard from '@/components/cards/TestedNumberCard.vue'
+// import InspectionPersonsNumberCard from '@/components/cards/InspectionPersonsNumberCard.vue'
+// import TelephoneAdvisoryReportsNumberCard from '@/components/cards/TelephoneAdvisoryReportsNumberCard.vue'
+// import ConsultationDeskReportsNumberCard from '@/components/cards/ConsultationDeskReportsNumberCard.vue'
+// import MetroCard from '@/components/cards/MetroCard.vue'
+// import AgencyCard from '@/components/cards/AgencyCard.vue'
+import ChitoseConfirmedCasesAttributesCard from '@/components/cards/ChitoseConfirmedCasesAttributesCard.vue'
+import ChitoseConfirmedCasesNumberCard from '@/components/cards/ChitoseConfirmedCasesNumberCard.vue'
+
 
 export default {
   components: {
-    ConfirmedCasesDetailsCard,
-    TestedCasesDetailsCard,
-    ConfirmedCasesNumberCard,
-    ConfirmedCasesAttributesCard,
-    TestedNumberCard,
-    InspectionPersonsNumberCard,
-    TelephoneAdvisoryReportsNumberCard,
-    ConsultationDeskReportsNumberCard,
-    MetroCard,
-    AgencyCard
+    ChitoseConfirmedCasesAttributesCard,
+    ChitoseConfirmedCasesNumberCard
   },
   data() {
     let title, updatedAt
@@ -119,14 +84,14 @@ export default {
     return data
   },
   head() {
-    const url = 'https://stopcovid19.metro.tokyo.lg.jp'
+    const url = 'https://stopcovid19-chitose.netlify.com'
     const timestamp = new Date().getTime()
     const ogpImage =
       this.$i18n.locale === 'ja'
         ? `${url}/ogp/${this.$route.params.card}.png?t=${timestamp}`
         : `${url}/ogp/${this.$i18n.locale}/${this.$route.params.card}.png?t=${timestamp}`
     const description = `${this.updatedAt} | ${this.$t(
-      '当サイトは新型コロナウイルス感染症 (COVID-19) に関する最新情報を提供するために、東京都が開設したものです。'
+      '当サイトは新型コロナウイルス感染症 (COVID-19) に関する最新情報を提供するために、「ツヨシオカ」が開設したものです。'
     )}`
 
     return {
@@ -143,10 +108,9 @@ export default {
           content:
             this.title +
             ' | ' +
-            this.$t('東京都') +
+            this.$t('千歳市') +
             ' ' +
-            this.$t('新型コロナウイルス感染症') +
-            this.$t('対策サイト')
+            this.$t('新型コロナウイルスまとめサイト')
         },
         {
           hid: 'description',
