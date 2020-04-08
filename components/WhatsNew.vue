@@ -1,34 +1,13 @@
 <template>
   <div class="WhatsNew">
     <h3 class="WhatsNew-heading">
-      <v-icon size="24" class="WhatsNew-heading-icon">
-        mdi-information
-      </v-icon>
       {{ $t('最新のお知らせ') }}
     </h3>
     <ul class="WhatsNew-list">
-      <li v-for="(item, i) in items" :key="i" class="WhatsNew-list-item">
-        <a
-          class="WhatsNew-list-item-anchor"
-          :href="item.url"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <time
-            class="WhatsNew-list-item-anchor-time px-2"
-            :datetime="formattedDate(item.date)"
-          >
-            {{ item.date }}
-          </time>
+      <li class="WhatsNew-list-item">
+        <a class="WhatsNew-list-item-anchor" target="_blank" rel="noopener noreferrer" href="https://www.city.chitose.lg.jp/docs/9855.html">
           <span class="WhatsNew-list-item-anchor-link">
-            {{ item.text }}
-            <v-icon
-              v-if="!isInternalLink(item.url)"
-              class="WhatsNew-item-ExternalLinkIcon"
-              size="12"
-            >
-              mdi-open-in-new
-            </v-icon>
+            {{ $t('千歳市の最新発表はこちら') }}
           </span>
         </a>
       </li>

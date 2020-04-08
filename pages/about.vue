@@ -6,13 +6,36 @@
     <StaticCard>
       {{
         $t(
-          '当サイトは新型コロナウイルス感染症 (COVID-19) に関する最新情報を提供するために、東京都が開設したものです。'
+          '当サイトは千歳市の新型コロナウイルス感染症 (COVID-19) に関する最新情報を提供するために作成され、開発は千歳市の「Tsuyoshioka」が行っています。'
         )
       }}<br />
       <br />
+      <i18n
+        path="複製、改変の許可されたMITライセンスで公開された東京都公式新型コロナウイルス対策サイト(https://stopcovid19.metro.tokyo.lg.jp/)のソースコードを利用しています。"
+        tag="span"
+        >
+        <template #tokyoCovid19>
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://stopcovid19.metro.tokyo.lg.jp/"
+          >{{ $t('東京都公式新型コロナウイルス対策サイト') }}</a
+          >
+        </template>
+        <template #tokyoCovid19GitHub>
+          <a
+            target="_blank"
+            href="https://github.com/tokyo-metropolitan-gov/covid19"
+            rel="noopener"
+          >{{ $t('仕組み') }}</a
+          >
+        </template>
+      </i18n>
+      <br />
+      <br />
       {{
         $t(
-          '東京都による公式情報と客観的な数値をわかりやすく伝えることで、東京都にお住まいの方や、東京都内に拠点を持つ企業の方、東京都を訪れる方が、現状を把握して適切な対策を取れるようにすることを目的としています。'
+          '北海道及び千歳市による公式情報と客観的な数値をわかりやすく伝えることで、千歳市にお住まいの方や、千歳市内に拠点を持つ企業の方、千歳市を訪れる方が、現状を把握して適切な対策を取れるようにすることを目的としています。'
         )
       }}
     </StaticCard>
@@ -171,7 +194,7 @@
       <p>
         {{
           $t(
-            '当サイトに掲載されている情報の正確性については万全を期していますが、東京都は利用者が当サイトの情報を用いて行う一切の行為について責任を負うものではありません。'
+            '当サイトに掲載されている情報の正確性については万全を期していますが、Tsuyoshiokaは利用者が当サイトの情報を用いて行う一切の行為について責任を負うものではありません。'
           )
         }}
       </p>
@@ -194,17 +217,22 @@
       <h3>{{ $t('データについて') }}</h3>
       <i18n
         tag="p"
-        path="本サイトで公表しているデータは、{catalogWebsite}より誰でも自由にダウンロードが可能です。（データは順次追加予定です）"
+        path="本サイトで公表しているデータは、北海道及び千歳市が公開している資料をもとに更新されています。"
       >
-        <template v-slot:catalogWebsite>
-          <a
-            href="https://portal.data.metro.tokyo.lg.jp/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {{ $t('東京都オープンデータカタログサイト') }}
-          </a>
-        </template>
+        <p>
+          {{
+          $t(
+          '北海道及び千歳市の多大なるご協力、ご尽力に感謝いたします。'
+          )
+          }}
+        </p>
+        <p>
+          {{
+          $t(
+          'また、このサイトの作成にあたり、「JUST道IT」の方々の北海道新型コロナウイルスまとめサイト"https://stopcovid19.hokkaido.dev/"を参考にさせていただいております。'
+          )
+          }}
+        </p>
       </i18n>
     </StaticCard>
     <StaticCard>
@@ -218,7 +246,7 @@
         <i18n path="詳しくは、{githubRepo}をご確認ください。">
           <template v-slot:githubRepo>
             <a
-              href="https://github.com/tokyo-metropolitan-gov/covid19"
+              href="https://github.com/tsuyoshioka/covid19"
               target="_blank"
               rel="noopener noreferrer"
             >
