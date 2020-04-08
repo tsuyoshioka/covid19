@@ -27,18 +27,18 @@
       </v-container>
     </div>
     <NoScript />
-    <development-mode-mark />
+    <!--    <development-mode-mark />-->
   </v-app>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import { MetaInfo } from 'vue-meta'
-import Data from '@/data/data.json'
 import ScaleLoader from 'vue-spinner/src/ScaleLoader.vue'
+import Data from '@/data/data.json'
 import SideNavigation from '@/components/SideNavigation.vue'
 import NoScript from '@/components/NoScript.vue'
-import DevelopmentModeMark from '@/components/DevelopmentModeMark.vue'
+// import DevelopmentModeMark from '@/components/DevelopmentModeMark.vue'
 import { convertDateToSimpleFormat } from '@/utils/formatDate'
 
 type LocalData = {
@@ -49,7 +49,7 @@ type LocalData = {
 
 export default Vue.extend({
   components: {
-    DevelopmentModeMark,
+    // DevelopmentModeMark,
     ScaleLoader,
     SideNavigation,
     NoScript
@@ -128,7 +128,7 @@ export default Vue.extend({
             ) +
             '' +
             this.$tc(
-            '複製、改変の許可されたMITライセンスで公開された東京都公式新型コロナウイルス対策サイト(https://stopcovid19.metro.tokyo.lg.jp/)のソースコードを利用しています。'
+              '複製、改変の許可されたMITライセンスで公開された東京都公式新型コロナウイルス対策サイト(https://stopcovid19.metro.tokyo.lg.jp/)のソースコードを利用しています。'
             )
         },
         {
