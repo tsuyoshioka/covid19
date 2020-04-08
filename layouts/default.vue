@@ -2,8 +2,8 @@
   <v-app class="app">
     <v-overlay v-if="loading" color="#F8F9FA" opacity="1" z-index="9999">
       <div class="loader">
-        <img src="/logo.svg" alt="東京都" />
-        <scale-loader color="#00A040" />
+        <img src="/logo.svg" alt="千歳市" />
+        <scale-loader color="#1D5088" />
       </div>
     </v-overlay>
     <div v-if="hasNavigation" class="appContainer">
@@ -104,7 +104,7 @@ export default Vue.extend({
       link: [
         {
           rel: 'canonical',
-          href: `https://stopcovid19.metro.tokyo.lg.jp${this.$route.path}`
+          href: `https://stopcovid19-chitose.netlify.com${this.$route.path}`
         },
         {
           rel: 'stylesheet',
@@ -115,7 +115,7 @@ export default Vue.extend({
         {
           hid: 'author',
           name: 'author',
-          content: this.$tc('東京都')
+          content: this.$tc('Tsuyoshioka')
         },
         {
           hid: 'description',
@@ -124,14 +124,18 @@ export default Vue.extend({
             convertDateToSimpleFormat(Data.lastUpdate) +
             ' 更新：　' +
             this.$tc(
-              '当サイトは新型コロナウイルス感染症 (COVID-19) に関する最新情報を提供するために、東京都が開設したものです。'
+              '当サイトは千歳市の新型コロナウイルス感染症 (COVID-19) に関する最新情報を提供するために作成され、開発は千歳市の「Tsuyoshioka」が行っています。'
+            ) +
+            '' +
+            this.$tc(
+            '複製、改変の許可されたMITライセンスで公開された東京都公式新型コロナウイルス対策サイト(https://stopcovid19.metro.tokyo.lg.jp/)のソースコードを利用しています。'
             )
         },
         {
           hid: 'og:site_name',
           property: 'og:site_name',
           content:
-            this.$t('東京都') +
+            this.$t('千歳市') +
             ' ' +
             this.$t('新型コロナウイルス感染症') +
             ' ' +
@@ -140,14 +144,14 @@ export default Vue.extend({
         {
           hid: 'og:url',
           property: 'og:url',
-          content: `https://stopcovid19.metro.tokyo.lg.jp${this.$route.path}`
+          content: `https://stopcovid19-chitose.netlify.com${this.$route.path}`
         },
         ogLocale,
         {
           hid: 'og:title',
           property: 'og:title',
           content:
-            this.$t('東京都') +
+            this.$t('千歳市') +
             ' ' +
             this.$t('新型コロナウイルス感染症') +
             ' ' +
@@ -160,7 +164,11 @@ export default Vue.extend({
             convertDateToSimpleFormat(Data.lastUpdate) +
             ' 更新：　' +
             this.$tc(
-              '当サイトは新型コロナウイルス感染症 (COVID-19) に関する最新情報を提供するために、東京都が開設したものです。'
+              '当サイトは千歳市の新型コロナウイルス感染症 (COVID-19) に関する最新情報を提供するために作成され、開発は千歳市の「Tsuyoshioka」が行っています。'
+            ) +
+            '' +
+            this.$tc(
+              '複製、改変の許可されたMITライセンスで公開された東京都公式新型コロナウイルス対策サイト(https://stopcovid19.metro.tokyo.lg.jp/)のソースコードを利用しています。'
             )
         },
         {
@@ -172,7 +180,7 @@ export default Vue.extend({
           hid: 'apple-mobile-web-app-title',
           name: 'apple-mobile-web-app-title',
           content:
-            this.$t('東京都') +
+            this.$t('千歳市') +
             ' ' +
             this.$t('新型コロナウイルス感染症') +
             ' ' +
@@ -239,7 +247,7 @@ export default Vue.extend({
     position: fixed;
     top: 0;
     overflow-y: auto;
-    width: 240px;
+    width: 250px;
     height: 100%;
     border-right: 1px solid $gray-4;
     border-left: 1px solid $gray-4;

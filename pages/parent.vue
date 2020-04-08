@@ -40,10 +40,10 @@
           {{ $t('各保健所の電話番号について') }}
           <br />
           <a
-            href="https://www.fukushihoken.metro.tokyo.lg.jp/iryo/kansen/coronasodan.html"
+            href="https://www.city.chitose.lg.jp/docs/9569.html#%E5%B8%B0%E5%9B%BD%E8%80%85%E3%83%BB%E6%8E%A5%E8%A7%A6%E8%80%85%E7%9B%B8%E8%AB%87%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC"
             target="_blank"
             rel="noopener noreferrer"
-            >{{ $t('「新型コロナウイルス感染症にかかる相談窓口について」') }}</a
+            >{{ $t('「帰国者・接触者相談センター」') }}</a
           >
         </li>
       </ul>

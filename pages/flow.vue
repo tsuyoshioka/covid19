@@ -5,21 +5,21 @@
       <page-header class="Flow-Heading-Title">
         {{ $t('新型コロナウイルス感染症が心配なときに') }}
       </page-header>
-      <PrinterButton :wrapper-class="'Flow-PullRight'" to="/print/flow" />
+<!--      <PrinterButton :wrapper-class="'Flow-PullRight'" to="/print/flow" />-->
     </div>
     <div>
       <div class="Flow-Card-Button-Wrapper">
         <a
-          href="https://www.fukushihoken.metro.tokyo.lg.jp/iryo/kansen/coronasodan.html"
+          href="https://www.city.chitose.lg.jp/docs/9569.html#%E5%B8%B0%E5%9B%BD%E8%80%85%E3%83%BB%E6%8E%A5%E8%A7%A6%E8%80%85%E7%9B%B8%E8%AB%87%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC"
           target="_blank"
           rel="noopener noreferrer"
           class="Flow-Card-Button"
         >
           <span class="Flow-Card-Button-Description">
-            {{ $t('かかりつけ医に相談することもできます。') }}<br />
+            {{ $t('新型コロナウイルス感染症の感染が疑われる方については「帰国者・接触者相談センター」へご相談することができます。') }}<br />
             {{ $t('詳しくはこちらをご参照ください。') }}
           </span>
-          {{ $t('詳細を見る（東京都福祉保健局）') }}
+          {{ $t('相談先の詳細を見る（帰国者・接触者相談センター）') }}
           <v-icon class="Flow-Card-Button-ExternalLinkIcon" size="20">
             mdi-open-in-new
           </v-icon>
@@ -39,7 +39,7 @@
 import Vue from 'vue'
 import { TranslateResult } from 'vue-i18n'
 import CovidIcon from '@/static/covid.svg'
-import PrinterButton from '@/components/PrinterButton.vue'
+// import PrinterButton from '@/components/PrinterButton.vue'
 import FlowPc from '@/components/flow/FlowPc.vue'
 import FlowSp from '@/components/flow/FlowSp.vue'
 import PageHeader from '@/components/PageHeader.vue'
@@ -48,7 +48,7 @@ export default Vue.extend({
   components: {
     CovidIcon,
     PageHeader,
-    PrinterButton,
+    // PrinterButton,
     FlowPc,
     FlowSp
   },
