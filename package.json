@@ -1,7 +1,7 @@
 {
   "name": "covid19",
   "version": "1.0.0",
-  "description": "千歳市 新型コロナウイルス感染症対策サイト",
+  "description": "千歳市 新型コロナウイルスまとめサイト",
   "author": "Tsuyoshioka",
   "private": true,
   "engines": {
@@ -14,6 +14,7 @@
     "start": "cross-env NODE_ENV=production nuxt-ts start",
     "generate:deploy": "cross-env GENERATE_ENV=production nuxt-ts generate",
     "generate:dev": "cross-env GENERATE_ENV=development nuxt-ts generate",
+    "generate:production": "cross-env NODE_ENV=production nuxt-ts generate",
     "generate": "eslint './**/*.{js,ts,vue}' && nuxt-ts generate",
     "lint-and-generate": "eslint './**/*.{js,ts,vue}' && nuxt-ts generate",
     "test": "echo 'skip tests (there is no test)'",
@@ -31,7 +32,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "sh pre-commit.sh && lint-staged"
+      "pre-commit": "lint-staged"
     }
   },
   "dependencies": {
