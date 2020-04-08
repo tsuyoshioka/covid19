@@ -92,7 +92,8 @@ const config: Configuration = {
     '@nuxtjs/stylelint-module',
     '@nuxtjs/vuetify',
     '@nuxt/typescript-build',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    '@nuxtjs/gtm'
   ],
   /*
    ** Nuxt.js modules
@@ -118,6 +119,9 @@ const config: Configuration = {
   },
   googleAnalytics: {
     id: process.env.GOOGLE_ANALYTICS_ID // .env.production などに設定してください。
+  },
+  gtm: {
+    id: 'GTM-MV2ZBBG'
   },
   optionalCookies: [
     {

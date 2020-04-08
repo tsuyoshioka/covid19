@@ -38,6 +38,7 @@
   "dependencies": {
     "@nuxt/typescript-runtime": "^0.4.0",
     "@nuxtjs/dotenv": "^1.4.0",
+    "@nuxtjs/gtm": "^2.2.3",
     "@nuxtjs/pwa": "^3.0.0-0",
     "@types/d3": "^5.7.2",
     "@types/mapbox-gl": "^1.8.0",
