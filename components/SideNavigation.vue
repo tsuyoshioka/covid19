@@ -10,15 +10,18 @@
       </v-icon>
       <h1 class="SideNavigation-HeaderTitle">
         <nuxt-link :to="localePath('/')" class="SideNavigation-HeaderLink">
-          <img
-            class="SideNavigation-HeaderLogo"
-            src="/logo.svg"
-            :alt="$t('千歳市')"
-          />
+          <div class="SideNavigation-Logo">
+            <img
+              class="SideNavigation-HeaderLogo"
+              src="/logo.svg"
+              :alt="$t('千歳市')"
+            />
+          </div>
           <div class="SideNavigation-HeaderText">
-            {{ $t('千歳市') }}<br />{{
-              $t('新型コロナウイルスまとめサイト')
-            }}
+            {{ $t('千歳市') }}<br />{{ $t('新型コロナウイルスまとめサイト') }}
+          </div>
+          <div class="SideNavigation-Sp-HeaderText">
+            {{ $t('新型コロナウイルス') }}<br />{{ $t('まとめサイト') }}
           </div>
         </nuxt-link>
       </h1>
@@ -138,7 +141,8 @@ export default Vue.extend({
         {
           icon: 'CovidIcon',
           title: this.$t('新型コロナウイルス感染症が心配なとき'),
-          link: 'http://www.pref.hokkaido.lg.jp/hf/kth/kak/singatakoronahaien.htm#%E9%81%93%E6%B0%91%E3%81%B8',
+          link:
+            'http://www.pref.hokkaido.lg.jp/hf/kth/kak/singatakoronahaien.htm#%E9%81%93%E6%B0%91%E3%81%B8',
           divider: true
         },
         {
@@ -169,8 +173,7 @@ export default Vue.extend({
         // },
         {
           title: this.$t('市長からのメッセージ'),
-          link:
-            'https://www.city.chitose.lg.jp/docs/9877.html'
+          link: 'https://www.city.chitose.lg.jp/docs/9877.html'
         },
         {
           title: this.$t('当サイトについて'),
@@ -213,6 +216,10 @@ export default Vue.extend({
   &:focus {
     outline: 1px dotted $gray-3;
   }
+}
+
+.SideNavigation-Logo {
+  width: 110px;
 }
 
 .SideNavigation-Header {
@@ -313,11 +320,15 @@ export default Vue.extend({
 .SideNavigation-HeaderText {
   margin: 10px 0 0 0;
   @include lessThan($small) {
-    margin: 0 0 0 10px;
+    display: none;
   }
+}
 
-  @include lessThan($tiny) {
-    margin: 0;
+.SideNavigation-Sp-HeaderText {
+  display: none;
+  @include lessThan($small) {
+    display: inline;
+    margin: 0 0 0 10px;
   }
 }
 
