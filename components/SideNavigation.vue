@@ -52,6 +52,13 @@
       </nav>
 
       <footer class="SideNavigation-Footer">
+        <a
+          href="https://faavo.jp/doodonan/project/4359"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img class="col-12" src="/funding.png" alt="千歳応援プロジェクト" />
+        </a>
         <div class="SideNavigation-Social">
           <a
             href="https://twitter.com/tsuyoshioka"
@@ -143,6 +150,13 @@ export default Vue.extend({
           title: this.$t('新型コロナウイルス感染症が心配なとき'),
           link:
             'http://www.pref.hokkaido.lg.jp/hf/kth/kak/singatakoronahaien.htm#%E9%81%93%E6%B0%91%E3%81%B8',
+          divider: true
+        },
+        {
+          title: this.$t(
+            'マチの飲食店を応援したい！支援プロジェクトはこちら（4/30まで!）'
+          ),
+          link: 'https://faavo.jp/doodonan/project/4359',
           divider: true
         },
         {

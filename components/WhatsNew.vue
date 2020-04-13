@@ -5,9 +5,29 @@
     </h3>
     <ul class="WhatsNew-list">
       <li class="WhatsNew-list-item">
-        <a class="WhatsNew-list-item-anchor" target="_blank" rel="noopener noreferrer" href="https://www.city.chitose.lg.jp/docs/9855.html">
+        <a
+          class="WhatsNew-list-item-anchor"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.city.chitose.lg.jp/docs/9855.html"
+        >
           <span class="WhatsNew-list-item-anchor-link">
             {{ $t('千歳市の最新発表はこちら') }}
+          </span>
+        </a>
+      </li>
+
+      <li>
+        <a
+          class="WhatsNew-list-item-anchor"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://faavo.jp/doodonan/project/4359"
+        >
+          <span class="WhatsNew-list-item-anchor-link">
+            {{
+              $t('マチの飲食店を応援したい。支援プロジェクト開始（4/30まで）')
+            }}
           </span>
         </a>
       </li>
