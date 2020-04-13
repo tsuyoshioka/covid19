@@ -1,14 +1,17 @@
-{
-    "newsItems": [
-        {
-            "date": "2020\/04\/07",
-            "url": "https:\/\/tokyodouga.jp\/rnEm2Okjevc.html",
-            "text": "東京都新型コロナウイルス感染症最新情報～小池都知事から都民の皆様へ～（令和2年4月6日）"
-        },
-        {
-            "date": "2020\/04\/07",
-            "url": "https:\/\/www.fukushihoken.metro.tokyo.lg.jp\/oshirase\/corona_0401.html",
-            "text": "新型コロナウイルス感染症でこれから入院される方へ"
-        }
-    ]
-}
+[
+      {
+            "title": "試練いつまで続く コロナ厳戒 首都、様変わり：北海道新聞 どうしん電子版 - 北海道新聞",
+            "url": "https://www.hokkaido-np.co.jp/article/411603",
+            "date": "2020/04/12 02:04"
+      },
+      {
+            "title": "新型コロナの不安解消願い 桜と鯉のぼり今年も - 信濃毎日新聞",
+            "url": "https://www.shinmai.co.jp/news/nagano/20200412/KT200411GVI090002000.php",
+            "date": "2020/04/12 00:04"
+      },
+      {
+            "title": "グループホーム入居者ら計４人感染確認 道が発表 新型コロナ：北海道新聞 どうしん電子版 - 北海道新聞",
+            "url": "https://www.hokkaido-np.co.jp/article/411528?rct=n_medical",
+            "date": "2020/04/11 12:04"
+      }
+]
