@@ -22,6 +22,7 @@
     <!--      :text="$t('自分や家族の症状に不安や心配があればまずは電話相談をどうぞ')"-->
     <!--      :btn-text="$t('相談の手順を見る')"-->
     <!--    />-->
+    <NewsItem class="mb-4" :items="news" />
     <v-row class="DataBlock">
       <ChitoseConfirmedCasesNumberCard />
       <ChitoseConfirmedCasesAttributesCard />
@@ -35,10 +36,11 @@ import Vue from 'vue'
 import { MetaInfo } from 'vue-meta'
 import PageHeader from '@/components/PageHeader.vue'
 import WhatsNew from '@/components/WhatsNew.vue'
+import NewsItem from '@/components/NewsItem.vue'
 // import StaticInfo from '@/components/StaticInfo.vue'
 import Data from '@/data/chitoseConfirmedCases.json'
 
-// import News from '@/data/news.json'
+import News from '@/data/news.json'
 // import ConfirmedCasesDetailsCard from '@/components/cards/ConfirmedCasesDetailsCard.vue'
 // import TestedCasesDetailsCard from '@/components/cards/TestedCasesDetailsCard.vue'
 // import ConfirmedCasesNumberCard from '@/components/cards/ConfirmedCasesNumberCard.vue'
@@ -58,6 +60,7 @@ export default Vue.extend({
   components: {
     PageHeader,
     WhatsNew,
+    NewsItem,
     // StaticInfo,
     // ChitoseConfirmedCasesCard,
     ChitoseConfirmedCasesAttributesCard,
@@ -70,8 +73,8 @@ export default Vue.extend({
       headerItem: {
         icon: 'mdi-chart-timeline-variant',
         title: this.$t('市内の最新感染動向')
-      }
-      // newsItems: News.newsItems
+      },
+      news: News
     }
     return data
   },
