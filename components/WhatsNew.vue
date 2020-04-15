@@ -16,6 +16,19 @@
           </span>
         </a>
       </li>
+      <li class="WhatsNew-list-item">
+        <a
+          class="WhatsNew-list-item-anchor"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.facebook.com/407542006448330/"
+        >
+          <span class="WhatsNew-list-item-anchor-link">
+            {{ $t('千歳市「災害・防災・減災情報」') }}
+            {{ $t('フェイスブックページ') }}
+          </span>
+        </a>
+      </li>
 
       <li>
         <a

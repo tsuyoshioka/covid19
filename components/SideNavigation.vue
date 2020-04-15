@@ -154,9 +154,13 @@ export default Vue.extend({
         },
         {
           title: this.$t(
-            'マチの飲食店を応援したい！支援プロジェクトはこちら（4/30まで!）'
+            'マチの飲食店を応援したい。支援プロジェクト開始（4/30まで）'
           ),
-          link: 'https://faavo.jp/doodonan/project/4359',
+          link: 'https://faavo.jp/doodonan/project/4359'
+        },
+        {
+          title: this.$t('千歳・恵庭のデリバリー可能なお店'),
+          link: 'https://chitose-eniwa.mypl.net/article/takeout_chitose',
           divider: true
         },
         {
@@ -200,6 +204,10 @@ export default Vue.extend({
         {
           title: this.$t('千歳市公式ホームページ'),
           link: 'https://www.city.chitose.lg.jp/'
+        },
+        {
+          title: this.$t('千歳市「災害・防災・減災情報」'),
+          link: 'https://www.facebook.com/407542006448330/'
         }
       ]
     }
