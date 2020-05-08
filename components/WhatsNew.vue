@@ -1,8 +1,6 @@
 <template>
   <div class="WhatsNew">
-    <h3 class="WhatsNew-heading">
-      {{ $t('最新のお知らせ') }}
-    </h3>
+    <h3 class="WhatsNew-heading">{{ $t('最新のお知らせ') }}</h3>
     <ul class="WhatsNew-list">
       <li class="WhatsNew-list-item">
         <a
@@ -11,9 +9,9 @@
           rel="noopener noreferrer"
           href="https://www.city.chitose.lg.jp/docs/9855.html"
         >
-          <span class="WhatsNew-list-item-anchor-link">
-            {{ $t('千歳市の最新発表はこちら') }}
-          </span>
+          <span class="WhatsNew-list-item-anchor-link">{{
+            $t('千歳市の最新発表はこちら')
+          }}</span>
         </a>
       </li>
       <li class="WhatsNew-list-item">
@@ -30,7 +28,7 @@
         </a>
       </li>
 
-      <li>
+      <!-- <li>
         <a
           class="WhatsNew-list-item-anchor"
           target="_blank"
@@ -43,7 +41,7 @@
             }}
           </span>
         </a>
-      </li>
+      </li>-->
     </ul>
   </div>
 </template>

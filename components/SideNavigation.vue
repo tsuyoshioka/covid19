@@ -5,9 +5,8 @@
         class="SideNavigation-OpenIcon"
         :aria-label="$t('サイドメニュー項目を開く')"
         @click="$emit('openNavi', $event)"
+        >mdi-menu</v-icon
       >
-        mdi-menu
-      </v-icon>
       <h1 class="SideNavigation-HeaderTitle">
         <nuxt-link :to="localePath('/')" class="SideNavigation-HeaderLink">
           <div class="SideNavigation-Logo">
@@ -18,10 +17,14 @@
             />
           </div>
           <div class="SideNavigation-HeaderText">
-            {{ $t('千歳市') }}<br />{{ $t('新型コロナウイルスまとめサイト') }}
+            {{ $t('千歳市') }}
+            <br />
+            {{ $t('新型コロナウイルスまとめサイト') }}
           </div>
           <div class="SideNavigation-Sp-HeaderText">
-            {{ $t('新型コロナウイルス') }}<br />{{ $t('まとめサイト') }}
+            {{ $t('新型コロナウイルス') }}
+            <br />
+            {{ $t('まとめサイト') }}
           </div>
         </nuxt-link>
       </h1>
@@ -32,9 +35,8 @@
         class="SideNavigation-CloseIcon"
         :aria-label="$t('サイドメニュー項目を閉じる')"
         @click="$emit('closeNavi', $event)"
+        >mdi-close</v-icon
       >
-        mdi-close
-      </v-icon>
 
       <nav class="SideNavigation-Menu">
         <div class="SideNavigation-Language">
@@ -42,9 +44,11 @@
             v-if="this.$i18n.locales.length > 1"
             class="SideNavigation-Language"
           >
-            <label class="SideNavigation-LanguageLabel" for="LanguageSelector">
-              {{ $t('多言語対応選択メニュー') }}
-            </label>
+            <label
+              class="SideNavigation-LanguageLabel"
+              for="LanguageSelector"
+              >{{ $t('多言語対応選択メニュー') }}</label
+            >
             <LanguageSelector />
           </div>
         </div>
@@ -52,13 +56,13 @@
       </nav>
 
       <footer class="SideNavigation-Footer">
-        <a
+        <!-- <a
           href="https://faavo.jp/doodonan/project/4359"
           target="_blank"
           rel="noreferrer"
         >
           <img class="col-12" src="/funding.png" alt="千歳応援プロジェクト" />
-        </a>
+        </a>-->
         <div class="SideNavigation-Social">
           <a
             href="https://twitter.com/tsuyoshioka"
@@ -101,12 +105,10 @@
             target="_blank"
             rel="license"
             class="SideNavigation-LicenseLink"
+            >{{ $t('クリエイティブ・コモンズ 表示 4.0 ライセンス') }}</a
           >
-            {{ $t('クリエイティブ・コモンズ 表示 4.0 ライセンス') }}
-          </a>
           {{ $t('の下に提供されています。') }}
-          <br />
-          2020 stopcovid19-chitose
+          <br />2020 stopcovid19-chitose
         </small>
       </footer>
     </div>
@@ -152,12 +154,12 @@ export default Vue.extend({
             'http://www.pref.hokkaido.lg.jp/hf/kth/kak/singatakoronahaien.htm#%E9%81%93%E6%B0%91%E3%81%B8',
           divider: true
         },
-        {
-          title: this.$t(
-            'マチの飲食店を応援したい。支援プロジェクト開始（4/30まで）'
-          ),
-          link: 'https://faavo.jp/doodonan/project/4359'
-        },
+        // {
+        //   title: this.$t(
+        //     'マチの飲食店を応援したい。支援プロジェクト開始（4/30まで）'
+        //   ),
+        //   link: 'https://faavo.jp/doodonan/project/4359'
+        // },
         {
           title: this.$t('千歳・恵庭のデリバリー可能なお店'),
           link: 'https://chitose-eniwa.mypl.net/article/takeout_chitose',
